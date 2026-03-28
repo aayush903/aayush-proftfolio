@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─── SEO META ─── -->
+  <title>Aayush Pandey | Full Stack Developer, Photographer & Creative Professional India</title>
+  <meta name="description" content="Aayush Pandey is a Full Stack Developer, Research Analyst, Photographer and Video Editor based in India. Available for freelance web development, photography, video editing and research projects." />
+  <meta name="keywords" content="Aayush Pandey, Full Stack Developer India, Web Developer India, Freelance Photographer India, Video Editor India, Research Analyst, Bootstrap Developer, Portfolio India" />
+  <meta name="author" content="Aayush Pandey" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://aayushpandey.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aayush Pandey | Developer & Creative Professional" />
+  <meta property="og:description" content="Full Stack Developer, Photographer, Video Editor & Research Analyst. Building meaningful digital experiences from India." />
+  <meta property="og:url" content="https://aayushpandey.dev/" />
+  <meta property="og:image" content="port2.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aayush Pandey | Developer & Creative" />
+  <meta name="twitter:description" content="Full Stack Developer, Photographer, Video Editor & Research Analyst based in India." />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Aayush Pandey","url":"https://aayushpandey.dev","jobTitle":"Full Stack Developer","telephone":"+917982551772","email":"aayushpandey@email.com","address":{"@type":"PostalAddress","addressCountry":"IN"},"sameAs":["https://www.linkedin.com/in/aayush-pandey-94799b2bb/"],"knowsAbout":["Web Development","Photography","Video Editing","Research Analysis","Bootstrap","JavaScript"]}</script>
+
+  <!-- Bootstrap 5 + Icons + Fonts (fully loaded for responsive grid & utilities) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="a.css">
+  <!-- tiny extra responsive overrides to ensure Bootstrap + existing CSS work harmoniously (no CSS changes, only ensuring container widths respect Bootstrap) -->
+  <style>
+    /* no visual change — just ensures Bootstrap container uses proper breakpoints and existing CSS remains untouched */
+    .container { max-width: 1280px; }
+    @media (max-width: 576px) {
+      .hero-stats { justify-content: space-between; width: 100%; }
+      .stat-sep { display: none; }
+      .hero-stats .stat-sep:first-of-type { display: none; }
+    }
+    /* ensure images and cards respect fluidity without breaking original design */
+    img { max-width: 100%; height: auto; }
+    .c-card, .biz-hero, .ct-box { width: 100%; }
+    .overlay-inner { width: 100%; }
+    .tl { padding-left: 1.5rem; }
+    @media (max-width: 768px) {
+      .tl::before { left: 2px; }
+      .tl-dot { left: -18px; }
+    }
+  </style>
+</head>
+<body>
+<div id="cg" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#home" class="nav-brand" aria-label="Aayush Pandey Portfolio">AP.</a>
+      <div class="nav-links" role="menubar">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+        <a href="#experience">Experience</a><a href="#education">Education</a>
+        <a href="#projects">Projects</a><a href="#business">Business</a>
+        <!-- <a href="#achievements">Achievements</a> -->
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="ham-btn" aria-label="Toggle menu" aria-expanded="false"><i class="bi bi-list" id="ham-icon"></i></button>
+    </div>
+    <div id="mob-menu" role="menu">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#experience">Experience</a><a href="#education">Education</a>
+      <a href="#projects">Projects</a><a href="#business">Business</a>
+      <a href="#achievements">Achievements</a><a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" aria-label="Hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="container position-relative" style="z-index:1">
+    <div class="row">
+      <div class="col-xl-8 col-lg-10 col-12">
+        <div class="hero-tag fu"><span></span>Available for Freelance &amp; Collaborations</div>
+        <h1 class="hero-name fu fd1">Aayush<br><em>Pandey</em></h1>
+        <p class="hero-role fu fd2"><span id="typing-text"></span><span style="border-right:2px solid var(--ac);animation:pulse 1s infinite;">&nbsp;</span></p>
+        <p class="hero-desc fu fd2">A passionate developer &amp; creative professional building meaningful digital experiences — combining clean code with a creative eye.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4 fu fd3">
+          <a href="#contact" class="btn-gold"><i class="bi bi-chat-dots"></i>Let's Talk</a>
+          <a href="#projects" class="btn-ghost"><i class="bi bi-grid"></i>View Work</a>
+          <button class="btn-ghost" data-bs-toggle="modal" data-bs-target="#resumeModal"><i class="bi bi-file-person"></i>Resume</button>
+        </div>
+        <div class="hero-stats fu d-flex flex-wrap align-items-center gap-3 gap-md-4">
+          <div><div class="stat-val">2+</div><div class="stat-lbl">Years Exp.</div></div>
+          <div class="stat-sep d-none d-sm-block"></div>
+          <div><div class="stat-val">5+</div><div class="stat-lbl">Projects</div></div>
+          <div class="stat-sep d-none d-sm-block"></div>
+          <div><div class="stat-val">4</div><div class="stat-lbl">Core Skills</div></div>
+          <div class="stat-sep d-none d-sm-block"></div>
+          <div><div class="stat-val">100%</div><div class="stat-lbl">Satisfaction</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" aria-labelledby="about-h">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 col-md-6 text-center fu">
+        <div class="about-frame mx-auto w-100">
+          <img src="./image/maine imagee 1.jpeg" alt="Aayush Pandey — Full Stack Developer" class="img-fluid" loading="lazy">
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-6">
+        <span class="s-label fu">Who I Am</span>
+        <h2 class="s-title fu fd1" id="about-h">About Me</h2>
+        <div class="s-line fu fd1"></div>
+        <p class="mt-4 fu fd2" style="color:#fff6f6;line-height:1.88;font-size:.93rem;">Hi! I'm <strong style="color:#fff;">Aayush Pandey</strong>, a multi-skilled professional from India specializing in web development, creative content, and research analysis. I love turning complex problems into clean, beautiful digital solutions.</p>
+        <p class="mt-3 fu fd2" style="color:#fff3f3;line-height:1.88;font-size:.89rem;">Beyond tech, I'm a photographer capturing stories through a lens, a video editor bringing ideas to life, and a researcher who surfaces meaningful insights from data. Creativity + analytical thinking = my superpower.</p>
+        <div class="mt-4 fu fd3 d-flex flex-wrap gap-2">
+          <span class="info-chip"><i class="bi bi-geo-alt-fill"></i>India</span>
+          <span class="info-chip"><i class="bi bi-briefcase-fill"></i>Open to Work</span>
+          <span class="info-chip"><i class="bi bi-stars"></i>2+ Years Experience</span>
+          <span class="info-chip"><i class="bi bi-mortarboard-fill"></i>B.Tech CSE Student</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" aria-labelledby="skills-h">
+  <div class="container">
+    <div class="text-center mb-5 fu">
+      <span class="s-label">What I Know</span>
+      <h2 class="s-title" id="skills-h">Skills &amp; Technologies</h2>
+      <div class="s-line mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fu">
+        <div class="c-card p-4 h-100">
+          <div class="icon-box mb-3"><i class="bi bi-code-slash"></i></div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:.97rem;margin-bottom:16px;">Frontend Development</h3>
+          <div class="mb-3"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">HTML / CSS</small><small style="color:var(--ac);">90%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="90"></div></div></div>
+          <div class="mb-3"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">JavaScript</small><small style="color:var(--ac);">75%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="75"></div></div></div>
+          <div class="mb-4"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">Bootstrap 5</small><small style="color:var(--ac);">85%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="85"></div></div></div>
+          <div><span class="skill-pill">HTML5</span><span class="skill-pill">CSS3</span><span class="skill-pill">JavaScript</span><span class="skill-pill">Bootstrap</span></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fu fd1">
+        <div class="c-card p-4 h-100">
+          <div class="icon-box mb-3"><i class="bi bi-server"></i></div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:.97rem;margin-bottom:16px;">Backend &amp; Tools</h3>
+          <div class="mb-3"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">Java (Learning)</small><small style="color:var(--ac);">30%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="30"></div></div></div>
+          <div class="mb-4"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">Git / GitHub</small><small style="color:var(--ac);">70%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="70"></div></div></div>
+          <div><span class="skill-pill">Java</span><span class="skill-pill">Git</span><span class="skill-pill">GitHub</span><span class="skill-pill">VS Code</span></div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fu fd2">
+        <div class="c-card p-4 h-100">
+          <div class="icon-box mb-3"><i class="bi bi-stars"></i></div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:.97rem;margin-bottom:16px;">Creative Skills</h3>
+          <div class="mb-3"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">Video Editing</small><small style="color:var(--ac);">85%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="85"></div></div></div>
+          <div class="mb-3"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">Photography</small><small style="color:var(--ac);">90%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="90"></div></div></div>
+          <div class="mb-3"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">Research Analyst</small><small style="color:var(--ac);">88%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="88"></div></div></div>
+          <div class="mb-4"><div class="d-flex justify-content-between mb-1"><small style="color:#aaa;">Graphic Design (Canva)</small><small style="color:var(--ac);">75%</small></div><div class="pb-wrap"><div class="pb-fill" data-w="75"></div></div></div>
+          <div><span class="skill-pill">Canva</span><span class="skill-pill">Photography</span><span class="skill-pill">Video Edit</span><span class="skill-pill">Research</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" aria-labelledby="exp-h">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-12 fu">
+        <span class="s-label">My Journey</span>
+        <h2 class="s-title" id="exp-h">Work Experience</h2>
+        <div class="s-line"></div>
+        <p class="mt-4" style="color:#ebebeb;font-size:.89rem;line-height:1.85;">My professional path has shaped me into a versatile professional — developer, researcher, and creative — all in one.</p>
+      </div>
+      <div class="col-lg-8 col-md-12 fu fd1">
+        <div class="tl">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2024-2026 — </div>
+            <div class="tl-role">eMango pvt.ltd </div>
+            <div class="tl-co" style="color: #c9c5c5;"><i class="bi bi-building me-1"></i>INFORMATION RESEARCHER</div>
+            <p class="tl-desc"><ol>
+                <li>CONDUCT RESEARCH AND DATA ANALYSIS FOR
+EDUCATIONAL PROJECTS
+</li>
+<li>SUPPORT IN REPORT PREPARATION AND INFORMATION
+MANAGEMENT</li>
+<li>RESEARCH ANALYST INTERN – EMANGO EDUCATION PVT.
+LTD. (FEB 2024 – MAY 2024)
+</li>
+<li>ASSISTED IN EDUCATIONAL DATA RESEARCH
+GAINED EXPOSURE TO PROFESSIONAL REPORTING AND
+ANALYSIS
+</li>
+            </ol></p>
+             <div class="tl-role">ALSO WORED AS </div>
+             <p class="tl-desc"><ol>
+            <LI>VIDEO EDITOR</LI>
+            <LI>GRAPHIC DESIGNER</LI>
+            
+            </ol></p>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-date">2026</div>
+            <div class="tl-role">GANDHI EYE CENTRE</div>
+            <div class="tl-co" style="color: #c9c5c5;"><i class="bi bi-bar-chart me-1"></i>DIGITAL MARKETING</div>
+            <p class="tl-desc"><OL>
+                <LI>Planning and executing digital marketing campaigns </LI>
+                <LI>Managing social media platforms and content strategy </LI>
+                <LI> Handling SEO, SEM, and paid advertising campaigns 
+Analyzing performance metrics and optimizing campaigns </LI>
+<LI>Coordinating with the design and content teams 
+</LI>
+            </OL></p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" aria-labelledby="edu-h">
+  <div class="container">
+    <div class="text-center mb-5 fu">
+      <span class="s-label">Academic Background</span>
+      <h2 class="s-title" id="edu-h">Education</h2>
+      <div class="s-line mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fu">
+        <div class="c-card p-4 h-100">
+          <div class="d-flex align-items-start gap-3">
+            <div class="icon-box"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2"><strong style="color:#fff;font-family:'Syne',sans-serif;font-size:.92rem;">Diploma Degree</strong><span class="edu-year">2022–2026</span></div>
+              <div style="font-size:.81rem;color:white;">Computer Science &amp; Engineering</div>
+              <p class="mt-2" style="font-size:.81rem;color:#fcfbfb;line-height:1.7;">Pt. L.R. College of Technology
+Diploma in Computer Science &
+Engineering (Final Year)
+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fu fd1">
+        <div class="c-card p-4 h-100">
+          <div class="d-flex align-items-start gap-3">
+            <div class="icon-box"><i class="bi bi-building"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2"><strong style="color:#fff;font-family:'Syne',sans-serif;font-size:.92rem;">OPS INTERNATIONAL SCHOOL KARNAL (10th)</strong><span class="edu-year">2022</span></div>
+              <p class="mt-2" style="font-size:.81rem;color:#e0d3d3;line-height:1.7;">CBSE BOARD</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fu fd2">
+        <div class="c-card p-4 h-100">
+          <div class="d-flex align-items-start gap-3">
+            <div class="icon-box"><i class="bi bi-patch-check-fill"></i></div>
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-2"><strong style="color:#fff;font-family:'Syne',sans-serif;font-size:.92rem;">FULL STACK DEVELOPER</strong><span class="edu-year">2025-2026</span></div>
+              <div style="font-size:.81rem;color: #fff;">DUCAT</div>
+              <p class="mt-2" style="font-size:.81rem;color:#fffdfd;line-height:1.7;">Intensive full-stack training: HTML, CSS, JavaScript, Bootstrap 5, Java Script basics — with hands-on projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS (fully responsive using Bootstrap grid) -->
+<section id="projects" aria-labelledby="proj-h">
+  <div class="container">
+    <div class="text-center mb-5 fu">
+      <span class="s-label">My Work</span>
+      <h2 class="s-title" id="proj-h">Featured Projects</h2>
+      <div class="s-line mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 col-12 fu"><div class="c-card h-100"><div class="proj-thumb" aria-hidden="true">🎂</div><div class="proj-body"><div class="proj-title">Anniversary Wishes</div><p class="proj-desc">Animated wishing website with smooth transitions and effects.</p><div class="my-3"><span class="tag tag-b">HTML</span><span class="tag tag-g">CSS</span><span class="tag tag-p">Bootstrap</span><span class="tag tag-y">JS</span></div><a href="https://aayush903.github.io/anniversarywishes/" target="_blank" rel="noopener" class="proj-link">View Live <i class="bi bi-arrow-right"></i></a></div></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd1"><div class="c-card h-100"><div class="proj-thumb" aria-hidden="true">🎲</div><div class="proj-body"><div class="proj-title">Ludo Table</div><p class="proj-desc">Pixel-perfect Ludo board built entirely with HTML &amp; CSS.</p><div class="my-3"><span class="tag tag-b">HTML</span><span class="tag tag-g">CSS</span><span class="tag tag-p">Bootstrap</span></div><a href="./pages/ludo.html" class="proj-link">View Project <i class="bi bi-arrow-right"></i></a></div></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd2"><div class="c-card h-100"><div class="proj-thumb" aria-hidden="true">🃏</div><div class="proj-body"><div class="proj-title">Interactive Card</div><p class="proj-desc">Beautifully styled card with hover effects &amp; CSS animations.</p><div class="my-3"><span class="tag tag-b">HTML</span><span class="tag tag-g">CSS</span><span class="tag tag-p">Bootstrap</span></div><a href="./pages/webseit.html" class="proj-link">View Project <i class="bi bi-arrow-right"></i></a></div></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd3"><div class="c-card h-100"><div class="proj-thumb" aria-hidden="true">🚗</div><div class="proj-body"><div class="proj-title">Car Animation</div><p class="proj-desc">Pure CSS keyframe animation with advanced chaining techniques.</p><div class="my-3"><span class="tag tag-b">HTML</span><span class="tag tag-g">CSS</span><span class="tag tag-p">Bootstrap</span></div><a href="./pages/caranimation.html" class="proj-link">View Animation <i class="bi bi-arrow-right"></i></a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS -->
+<section id="business" aria-labelledby="biz-h">
+  <div class="container">
+    <div class="text-center mb-5 fu">
+      <span class="s-label">Entrepreneurship</span>
+      <h2 class="s-title" id="biz-h">My Business</h2>
+      <div class="s-line mx-auto"></div>
+    </div>
+    <div class="biz-hero fu mb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8 col-md-7">
+          <div class="icon-box mb-4" style="width:54px;height:54px;font-size:1.45rem;"><i class="bi bi-rocket-takeoff-fill"></i></div>
+          <h3 style="font-family:'Syne',sans-serif;font-weight:800;color:#fff;font-size:clamp(1.45rem,3vw,2rem);line-height:1.2;">SHRI CUBEEND FRAINGS</h3>
+          <p style="color:var(--ac);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;font-family:'Syne',sans-serif;margin-top:6px;">YOUR VISION OUR CREATIVE FRAMINGS</p>
+          <p class="mt-4" style="color:#c9c5c5;font-size:.91rem;line-height:1.87;max-width:570px;">Shri Cubeend Framing’s is a creative digital service provider specializing in frontend website development, graphic designing using and social media handling. We focus on delivering clean designs, engaging content, and organized digital solutions to help businesses build a strong and professional online presence.</p>
+        </div>
+        <div class="col-lg-4 col-md-5">
+          <div class="row g-3">
+            <div class="col-6 col-lg-12"><div style="background:rgba(240,180,41,.07);border:1px solid rgba(240,180,41,.14);border-radius:10px;padding:16px;text-align:center;"><div style="font-family:'Syne',sans-serif;font-size:1.85rem;font-weight:800;color:var(--ac);">5+</div><div style="font-size:.73rem;color:#fff1f1;text-transform:uppercase;letter-spacing:.07em;">Happy Clients</div></div></div>
+            <div class="col-6 col-lg-12"><div style="background:rgba(240,180,41,.07);border:1px solid rgba(240,180,41,.14);border-radius:10px;padding:16px;text-align:center;"><div style="font-family:'Syne',sans-serif;font-size:1.85rem;font-weight:800;color:var(--ac);">100%</div><div style="font-size:.73rem;color:#e4e1e1;text-transform:uppercase;letter-spacing:.07em;">Client Satisfaction</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 col-12 fu"><div class="c-card p-4 h-100"><div class="offer-num" style="color: #f6b92a;">01</div><div class="offer-title">Web Presence</div><p class="offer-desc">Custom websites with HTML, CSS, Bootstrap &amp; JavaScript — clean, fast, mobile-ready.</p></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd1"><div class="c-card p-4 h-100"><div class="offer-num" style="color: #f6b92a">02</div><div class="offer-title">Graphic Design</div><p class="offer-desc">Event, portrait, and product photography — professional quality, personal approach.</p></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd2"><div class="c-card p-4 h-100"><div class="offer-num" style="color: #f6b92a">03</div><div class="offer-title">Video Editing</div><p class="offer-desc">Reels, YouTube, brand films &amp; event highlights — edited with style, delivered fast.</p></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd3"><div class="c-card p-4 h-100"><div class="offer-num" style="color: #f6b92a">04</div><div class="offer-title">Data &amp; Management</div><p class="offer-desc">Data collection, market research &amp; analysis reports — raw data into clear insights.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="svc-h">
+  <div class="container">
+    <div class="text-center mb-5 fu">
+      <span class="s-label">What I Offer</span>
+      <h2 class="s-title" id="svc-h">Services</h2>
+      <div class="s-line mx-auto"></div>
+      <p class="mt-3" style="color:var(--mt);font-size:.88rem;">Click any service to see full details &amp; pricing</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 col-12 fu"><div class="c-card svc-card h-100" onclick="openOv('svc-ov')" role="button" tabindex="0"><div class="svc-icon"><i class="bi bi-laptop-fill"></i></div><div class="svc-title">Web Development</div><p class="svc-desc">Custom websites from design to deployment — Bootstrap, HTML, CSS, JavaScript.</p><div class="svc-hint"><i class="bi bi-arrow-right-circle"></i>See details</div></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd1"><div class="c-card svc-card h-100" onclick="openOv('svc-ov')" role="button" tabindex="0"><div class="svc-icon"><i class="bi bi-camera-video-fill"></i></div><div class="svc-title">Video Editing</div><p class="svc-desc">Reels, YouTube, event highlights &amp; brand films — edited professionally.</p><div class="svc-hint"><i class="bi bi-arrow-right-circle"></i>See details</div></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd2"><div class="c-card svc-card h-100" onclick="openOv('svc-ov')" role="button" tabindex="0"><div class="svc-icon"><i class="bi bi-palette-fill"></i></div><div class="svc-title">Graphic Design</div><p class="svc-desc">Posters, social media graphics &amp; branding materials via Canva and more.</p><div class="svc-hint"><i class="bi bi-arrow-right-circle"></i>See details</div></div></div>
+      <div class="col-sm-6 col-lg-3 col-12 fu fd3"><div class="c-card svc-card h-100" onclick="openOv('svc-ov')" role="button" tabindex="0"><div class="svc-icon"><i class="bi bi-camera-fill"></i></div><div class="svc-title">Photography</div><p class="svc-desc">Events, portraits &amp; product shots — professional photography at great rates.</p><div class="svc-hint"><i class="bi bi-arrow-right-circle"></i>See details</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="ct-h">
+  <div class="container">
+    <div class="text-center mb-5 fu">
+      <span class="s-label">Reach Out</span>
+      <h2 class="s-title" id="ct-h">Let's Connect</h2>
+      <div class="s-line mx-auto"></div>
+      <p class="mt-3" style="color:var(--mt);font-size:.92rem;">Tap any option below to reach me directly</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-12 fu">
+        <div class="ct-box">
+          <a href="tel:+917982551772" class="ct-item" aria-label="Call Aayush Pandey on +917982551772">
+            <div class="ct-icon"><i class="bi bi-telephone-fill"></i></div>
+            <div class="flex-grow-1"><div class="ct-lbl">Phone — Tap to Call</div><div class="ct-val">+91 79825 51772</div></div>
+            <i class="bi bi-chevron-right" style="color:var(--mt);flex-shrink:0;"></i>
+          </a>
+          <a href="https://wa.me/917982551772?text=Hi%20Aayush!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener" class="ct-item" aria-label="Chat on WhatsApp">
+            <div class="ct-icon" style="color:#25d366;background:rgba(37,211,102,.09);border-color:rgba(37,211,102,.2);"><i class="bi bi-whatsapp"></i></div>
+            <div class="flex-grow-1"><div class="ct-lbl">WhatsApp — Tap to Message</div><div class="ct-val">+91 79825 51772</div></div>
+            <i class="bi bi-chevron-right" style="color:var(--mt);flex-shrink:0;"></i>
+          </a>
+          <a href="mailto:aayushpandey@email.com?subject=Portfolio%20Enquiry" class="ct-item" aria-label="Email Aayush Pandey">
+            <div class="ct-icon"><i class="bi bi-envelope-fill"></i></div>
+            <div class="flex-grow-1"><div class="ct-lbl">Email — Tap to Mail</div><div class="ct-val">aayushpandey@email.com</div></div>
+            <i class="bi bi-chevron-right" style="color:var(--mt);flex-shrink:0;"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/aayush-pandey-94799b2bb/" target="_blank" rel="noopener" class="ct-item" aria-label="LinkedIn Profile">
+            <div class="ct-icon" style="color:#0a66c2;background:rgba(10,102,194,.09);border-color:rgba(10,102,194,.2);"><i class="bi bi-linkedin"></i></div>
+            <div class="flex-grow-1"><div class="ct-lbl">LinkedIn</div><div class="ct-val">aayush-pandey-94799b2bb</div></div>
+            <i class="bi bi-chevron-right" style="color:var(--mt);flex-shrink:0;"></i>
+          </a>
+          <div class="ct-item" style="cursor:default;">
+            <div class="ct-icon"><i class="bi bi-geo-alt-fill"></i></div>
+            <div class="flex-grow-1"><div class="ct-lbl">Location</div><div class="ct-val">India · Open to Remote Work</div></div>
+          </div>
+          <div class="mt-4">
+            <button class="btn-gold w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#resumeModal">
+              <i class="bi bi-file-earmark-person"></i>View My Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>Crafted with <span style="color:var(--ac);">♥</span> by <strong style="color:#fff;">Aayush Pandey</strong> &nbsp;·&nbsp; &copy; 2025 All Rights Reserved</p>
+    <div class="ft-links mt-3">
+      <a href="https://www.linkedin.com/in/aayush-pandey-94799b2bb/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+      <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ACHIEVEMENTS OVERLAY -->
+<div id="ach-ov" class="overlay-page" role="dialog" aria-modal="true" aria-label="Achievements page">
+  <div class="overlay-inner">
+    <button class="overlay-back" onclick="closeOv('ach-ov')"><i class="bi bi-arrow-left"></i>Back to Portfolio</button>
+    <h1 class="overlay-title">My Achievements</h1>
+    <p class="overlay-subtitle">A collection of milestones, certifications, and wins throughout my journey.</p>
+    <div class="ach-entry"><div class="ach-badge"><i class="bi bi-trophy-fill"></i></div><div><div class="ach-e-year">2024</div><div class="ach-e-title">5+ Successful Client Projects</div><p class="ach-e-desc">Delivered 5+ freelance web projects with 100% client satisfaction. Each was completed on time, exceeding expectations in design quality and functionality.</p></div></div>
+    <div class="ach-entry"><div class="ach-badge"><i class="bi bi-patch-check-fill"></i></div><div><div class="ach-e-year">2023</div><div class="ach-e-title">Web Development Certification</div><p class="ach-e-desc">Completed an intensive full-stack bootcamp covering HTML, CSS, JavaScript, Bootstrap 5, and Java. Certified upon successful project submission and code review.</p></div></div>
+    <div class="ach-entry"><div class="ach-badge"><i class="bi bi-code-square"></i></div><div><div class="ach-e-year">2023</div><div class="ach-e-title">Launched Live Portfolio Projects</div><p class="ach-e-desc">Published multiple live projects — Anniversary Wishing Website, Ludo Table, Interactive Card, and Car Animation — all publicly accessible on GitHub Pages.</p></div></div>
+    <div class="ach-entry"><div class="ach-badge"><i class="bi bi-mortarboard-fill"></i></div><div><div class="ach-e-year">2022</div><div class="ach-e-title">Enrolled in B.Tech CSE</div><p class="ach-e-desc">Secured admission to B.Tech in Computer Science &amp; Engineering, marking the beginning of formal technical education and software development career.</p></div></div>
+    <div class="ach-entry"><div class="ach-badge"><i class="bi bi-camera2"></i></div><div><div class="ach-e-year">2021–2022</div><div class="ach-e-title">Freelance Photography Recognition</div><p class="ach-e-desc">Received positive feedback and repeat bookings for event and portrait photography. Built a growing client base entirely through referrals, demonstrating strong professional skills.</p></div></div>
+    <div class="ach-entry"><div class="ach-badge"><i class="bi bi-bar-chart-fill"></i></div><div><div class="ach-e-year">2022</div><div class="ach-e-title">Research Analysis Excellence</div><p class="ach-e-desc">Completed multiple research and data analysis projects with detailed visual reports. Developed expertise in data interpretation and professional report writing.</p></div></div>
+    <div class="text-center mt-5"><button class="btn-gold" onclick="closeOv('ach-ov')"><i class="bi bi-arrow-left"></i>Back to Portfolio</button></div>
+  </div>
+</div>
+
+<!-- SERVICES OVERLAY -->
+<div id="svc-ov" class="overlay-page" role="dialog" aria-modal="true" aria-label="Services page">
+  <div class="overlay-inner">
+    <button class="overlay-back" onclick="closeOv('svc-ov')"><i class="bi bi-arrow-left"></i>Back to Portfolio</button>
+    <h1 class="overlay-title">My Services</h1>
+    <p class="overlay-subtitle">What I offer, what's included, and how to get started.</p>
+    <div class="svc-entry"><div class="d-flex align-items-start gap-3 flex-wrap"><div class="icon-box" style="flex-shrink:0;"><i class="bi bi-laptop-fill"></i></div><div class="flex-grow-1"><div class="svc-e-title">Web Development</div><p class="svc-e-desc">I design and build responsive, modern websites tailored to your needs — from personal portfolios to business landing pages. Mobile-first, fast, and SEO-ready.</p><div class="svc-price">₹999 – ₹4,999 <small>/ project</small></div><ul class="svc-features"><li>Fully Responsive (Mobile, Tablet, Desktop)</li><li>HTML, CSS, Bootstrap 5, JavaScript</li><li>Contact links &amp; smooth animations</li><li>SEO-friendly semantic markup</li><li>GitHub Pages deployment support</li></ul></div></div></div>
+    <div class="svc-entry"><div class="d-flex align-items-start gap-3 flex-wrap"><div class="icon-box" style="flex-shrink:0;"><i class="bi bi-camera-video-fill"></i></div><div class="flex-grow-1"><div class="svc-e-title">Video Editing</div><p class="svc-e-desc">Professional video editing for social media, YouTube, events, and personal branding — smooth cuts, transitions, color grading, and subtitles.</p><div class="svc-price">₹299 – ₹1,499 <small>/ video</small></div><ul class="svc-features"><li>Reels, Shorts &amp; YouTube Videos</li><li>Event highlight videos</li><li>Color grading &amp; transitions</li><li>Subtitles &amp; background music</li><li>Delivery in 24–48 hours</li></ul></div></div></div>
+    <div class="svc-entry"><div class="d-flex align-items-start gap-3 flex-wrap"><div class="icon-box" style="flex-shrink:0;"><i class="bi bi-palette-fill"></i></div><div class="flex-grow-1"><div class="svc-e-title">Graphic Design (Canva)</div><p class="svc-e-desc">Eye-catching posters, social media posts, banners, and branding materials that make your brand stand out visually.</p><div class="svc-price">₹199 – ₹999 <small>/ design</small></div><ul class="svc-features"><li>Instagram &amp; Facebook posts</li><li>Event posters &amp; banners</li><li>Logo concepts &amp; brand kits</li><li>Presentations &amp; pitch decks</li></ul></div></div></div>
+    <div class="svc-entry"><div class="d-flex align-items-start gap-3 flex-wrap"><div class="icon-box" style="flex-shrink:0;"><i class="bi bi-camera-fill"></i></div><div class="flex-grow-1"><div class="svc-e-title">Photography</div><p class="svc-e-desc">Professional photography for events, portraits, and products — capturing your story with clarity, creativity, and a personal touch.</p><div class="svc-price">₹499 – ₹2,999 <small>/ session</small></div><ul class="svc-features"><li>Event &amp; function photography</li><li>Portrait &amp; professional headshots</li><li>Product photography</li><li>Edited &amp; delivered in 48 hours</li></ul></div></div></div>
+    <div style="background:rgba(240,180,41,.07);border:1px solid rgba(240,180,41,.15);border-radius:12px;padding:24px;margin-top:4px;text-align:center;">
+      <p style="color:#ccc;margin-bottom:16px;font-size:.9rem;">Ready to get started? Reach me directly!</p>
+      <a href="tel:+917982551772" class="btn-gold me-2 mb-2"><i class="bi bi-telephone-fill"></i>Call Now</a>
+      <a href="https://wa.me/917982551772?text=Hi%20Aayush!%20I%20am%20interested%20in%20your%20services." target="_blank" rel="noopener" class="btn-ghost mb-2"><i class="bi bi-whatsapp"></i>WhatsApp</a>
+    </div>
+    <div class="text-center mt-4"><button class="btn-ghost" onclick="closeOv('svc-ov')"><i class="bi bi-arrow-left"></i>Back to Portfolio</button></div>
+  </div>
+</div>
+
+<!-- RESUME MODAL -->
+<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title" id="resumeLabel">Resume — Aayush Pandey</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button></div>
+      <div class="modal-body p-0"><img src="Aayush.jpg" alt="Aayush Pandey Resume" style="width:100%;display:block;" loading="lazy" /></div>
+      <div class="modal-footer"><button type="button" class="btn-ghost" data-bs-dismiss="modal">Close</button><a href="Aayush.jpg" download="Aayush_Pandey_Resume" class="btn-gold"><i class="bi bi-download"></i>Download</a></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+/* Cursor glow */
+const cg=document.getElementById('cg');
+document.addEventListener('mousemove',e=>{cg.style.left=e.clientX+'px';cg.style.top=e.clientY+'px';});
+
+/* Navbar scroll */
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>50),{passive:true});
+
+/* Hamburger */
+const hamBtn=document.getElementById('ham-btn'),hamIco=document.getElementById('ham-icon'),mob=document.getElementById('mob-menu');
+hamBtn.addEventListener('click',()=>{const o=mob.classList.toggle('open');hamIco.className=o?'bi bi-x':'bi bi-list';hamBtn.setAttribute('aria-expanded',o);});
+
+/* Smooth scroll — offset for fixed navbar */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(!t)return;
+    e.preventDefault();
+    const top=t.getBoundingClientRect().top+window.scrollY-nav.offsetHeight-8;
+    window.scrollTo({top,behavior:'smooth'});
+    if(mob.classList.contains('open')){ mob.classList.remove('open');hamIco.className='bi bi-list';hamBtn.setAttribute('aria-expanded','false');}
+  });
+});
+
+/* Typing */
+const tel=document.getElementById('typing-text');
+const wds=['Full Stack Developer','Research Analyst','Photographer','Video Editor','Creative Professional'];
+let wi=0,ci=0,dl=false;
+function type(){const w=wds[wi];tel.textContent=dl?w.slice(0,ci-1):w.slice(0,ci+1);dl?ci--:ci++;let s=dl?38:88;if(!dl&&ci===w.length){s=1900;dl=true;}else if(dl&&ci===0){dl=false;wi=(wi+1)%wds.length;s=380;}setTimeout(type,s);}
+setTimeout(type,900);
+
+/* Intersection observer */
+let skDone=false;
+const io=new IntersectionObserver(en=>{
+  en.forEach(e=>{
+    if(!e.isIntersecting)return;
+    e.target.classList.add('vis');
+    if(!skDone&&e.target.closest('#skills')){skDone=true;setTimeout(()=>document.querySelectorAll('.pb-fill').forEach(b=>b.style.width=b.dataset.w+'%'),200);}
+  });
+},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.fu').forEach(el=>io.observe(el));
+
+/* Hero instant reveal */
+setTimeout(()=>document.querySelectorAll('#home .fu').forEach((el,i)=>setTimeout(()=>el.classList.add('vis'),i*130)),150);
+
+/* Keyboard support for cards */
+document.querySelectorAll('.ach-card,.svc-card').forEach(c=>c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click();}}));
+
+/* Overlays */
+function openOv(id){const o=document.getElementById(id);o.classList.add('open');o.scrollTop=0;document.body.style.overflow='hidden';if(o.querySelector('.overlay-back')) o.querySelector('.overlay-back').focus();}
+function closeOv(id){document.getElementById(id).classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.overlay-page.open').forEach(o=>{o.classList.remove('open');document.body.style.overflow='';});});
+</script>
+</body>
+</html>
